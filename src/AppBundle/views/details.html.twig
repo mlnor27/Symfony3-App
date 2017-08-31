@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Détails des TODOs{% endblock %}
+
+{% block body %}
+    <h2 class="page-header">Détails du TODO n°{{ todo.id }} : {{ todo.name }}</h2>
+
+    <p><strong>Description :</strong><br>
+    {{ todo.description }}
+    </p>
+
+    <p><strong>Priority :</strong>
+    {{ todo.priority }}
+    </p>
+
+    <p><strong>Due Date :</strong><br>
+    {{ todo.dueDate|date('d-m-Y H:i:s') }}
+    </p>
+
+    <p><strong>Creation Date :</strong><br>
+        {{ todo.createDate|date('d-m-Y H:i:s') }}
+    </p>
+
+{% endblock %}
+
+{% block stylesheets %}
+
+{% endblock %}

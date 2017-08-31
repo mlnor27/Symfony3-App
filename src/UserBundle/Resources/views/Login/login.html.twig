@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Authentification{% endblock %}
+
+{% block body %}
+
+    {% if errors %}
+        <div class="alert alert-danger">
+            {{ errors.messageKey }}
+        </div>
+    {% endif %}
+
+    <h2 class="page-header">Login</h2>
+    {#{{ form_start(form) }}#}
+    {#{{ form_widget(form) }}#}
+    {#{{ form_end(form) }}#}
+
+    <form name="form" method="post" action="{{ path('login') }}">
+        <div id="form">
+            <div>
+                <label for="form__username" class="required">Username</label>
+                <input id="form__username" name="_username" required="required" class="form-control" style="margin-bottom:15px" type="text">
+            </div>
+            <div>
+                <label for="form__password" class="required">Password</label>
+                <input id="form__password" name="_password" required="required" class="form-control" style="margin-bottom:15px" type="password">
+            </div>
+            <div>
+                <button type="submit" id="form_Login" name="Login" class="btn btn-primary">Login</button>
+            </div>
+        </div>
+
+    </form>
+
+{% endblock %}
+
+{% block stylesheets %}
+
+{% endblock %}
