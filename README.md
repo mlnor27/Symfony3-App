@@ -1,7 +1,7 @@
 A Symfony3 App
 ==============
 
-CRUD + Auth
+Manage your TODOs including CRUD fonctionalities and authentication
 
 
 
